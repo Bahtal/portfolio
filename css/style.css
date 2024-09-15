@@ -55,13 +55,34 @@ body {
 	filter: blur(17px);
 }
 
+.blur-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: grid;
+	grid-template-columns: repeat(400, 1fr);
+	grid-template-rows: repeat(300, 1fr);
+	z-index: -1;
+	background: transpaernt;
+	filter: blur(1px);
+	width:40%;
+	height: 100%;
+	background-color: rgb(181, 181, 181, .2);
+	border-right: 3px solid rgb(250, 250, 250, .07);
+
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+}
+
 .filter-1 {
 	grid-column: 1 / 400;
+	filter: blur(17px);
 }
 
 .filter-2 {
 	grid-row: 2 / 300;
 	grid-column: 1;
+	filter: blur(17px);
 }
 
 .filter-3 {
@@ -141,7 +162,7 @@ body {
 }
 
 .logo {
-	font-size: 40px;
+	font-size: calc(0.5rem + 1.2vw);
 	font-weight: 700;
 	max-width: 11rem;
 }
@@ -153,14 +174,14 @@ body {
 .header__link {
 	display: flex;
 	justify-content: space-between;
-	width: 30rem;
+	width: 28vw;
 }
 
 .links {
 	text-decoration: none;
 	color: #9ac1ab;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: calc(4px + .46vw);
 	font-weight: 700;
 }
 
@@ -172,16 +193,21 @@ body {
 	color: #fafafa;
 }
 
+
 .section__title {
-	margin: 200px;
+	margin: 130px 0 130px 12vw; 
 	text-align: center;
-	font-size: 60px;
+	font-size: calc(1rem + 4vw);
 	font-weight: 900;
 	color: #7db18d;
+	text-shadow: 3px 3px 15px #6c9f81;
+	text-align: start;
 }
 
 .section__title span {
 	color: #fafafa;
+	text-shadow: 3px 3px 10px #9ac1ab;
+	margin-left: 14vw;
 }
 
 .white__link {
@@ -223,5 +249,24 @@ body {
 .footer__right {
 	display: flex;
 	justify-content: space-between;
-	width: 11rem;
+	width: 10vw;
 }
+
+.footer__svg {
+	max-width: 42px;
+	max-height: 42px;
+	cursor: pointer;
+	
+}
+
+#telegram, #vk, #telephone, #instagram {
+	fill: #6c9f81;
+}
+
+#telegram:hover, #vk:hover, #telephone:hover,  #instagram:hover{
+	fill: #fafafa;
+}
+
+
+
+
