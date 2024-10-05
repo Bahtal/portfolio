@@ -13,6 +13,7 @@
 
 body {
 	font-family: 'Montserrat';
+	overflow: hidden;
 }
 
 .wrapper {
@@ -22,6 +23,8 @@ body {
 	background-size: cover;
 
 	display: grid;
+	justify-content: center;
+	align-items: center;
 	grid-template-columns: auto;
 	grid-template-rows: 1fr 1fr 1fr;
 }
@@ -29,16 +32,17 @@ body {
 .wrapper__inner {
 	position: relative;	
 
-	width: 70%;
-	height: auto;
+	width: 100%;
+	height: calc(35% + 5vh);
 
-	grid-row: 2;
-	backdrop-filter: blur(20px);
+	grid-row-start: 1;
+
+	backdrop-filter: blur(10px);
 
 	color: #fafafa;
 
 	border: 4px solid rgb(250, 250, 250, .1);
-	border-radius: 25px;
+	border-radius: 28px;
 }
 
 .blur {
@@ -155,7 +159,14 @@ body {
 /* Header */
 
 .header {
-	margin: 50px 0;
+	position: relative;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	
+}
+
+.header__inner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -164,7 +175,7 @@ body {
 .logo {
 	font-size: calc(0.5rem + 1.2vw);
 	font-weight: 700;
-	max-width: 11rem;
+	max-width: 7rem;
 }
 
 .logo span {
@@ -174,7 +185,7 @@ body {
 .header__link {
 	display: flex;
 	justify-content: space-between;
-	width: 28vw;
+	width: calc(25px + 30vw);
 }
 
 .links {
@@ -195,18 +206,18 @@ body {
 
 
 .section__title {
-	margin: 130px 0 130px 12vw; 
+	margin: 10vw 10vw; 
 	text-align: center;
 	font-size: calc(1rem + 4vw);
 	font-weight: 900;
-	color: #7db18d;
-	text-shadow: 3px 3px 15px #6c9f81;
-	text-align: start;
+	color: #a14d73;
+	text-shadow: 3px 3px 15px #6b1c35;
+	text-align: center;
 }
 
 .section__title span {
 	color: #fafafa;
-	text-shadow: 3px 3px 10px #9ac1ab;
+	text-shadow: 2px 3px 10px #6b1c35;
 	margin-left: 14vw;
 }
 
@@ -220,10 +231,13 @@ body {
 }
 
 .footer {
+	
+}
+
+.footer__inner {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 50px;
 }
 
 .footer__left {
@@ -232,6 +246,9 @@ body {
 
 .footer__left-bottom {
 	margin-top: 10px;
+	font-size: 13px;
+	font-weight: 100;
+	font-style: italic;
 }
 
 .footer__btn {
@@ -249,18 +266,21 @@ body {
 .footer__right {
 	display: flex;
 	justify-content: space-between;
-	width: 10vw;
+	width: calc(40px + 15vw);
 }
 
 .footer__svg {
 	max-width: 42px;
+	width: calc(20px + 1vw);
 	max-height: 42px;
 	cursor: pointer;
 	
 }
 
+
+
 #telegram, #vk, #telephone, #instagram {
-	fill: #6c9f81;
+	fill: #fafafac2;
 }
 
 #telegram:hover, #vk:hover, #telephone:hover,  #instagram:hover{
