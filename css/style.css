@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--color-1: #02a48b;
+	--color-2: #fd0085;
+	--color-3: #02443a;
+	--color-4: #770129;
+}
+
 @font-face {
 	font-family: 'Montserrat';
 	src: url('./../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -21,12 +28,14 @@ body {
 	background-image: url('./../img/2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 
 	display: grid;
 	justify-content: center;
 	align-items: center;
 	grid-template-columns: auto;
 	grid-template-rows: 1fr 1fr 1fr;
+	transition: all .8s ease;
 }
 
 .wrapper__inner {
@@ -43,6 +52,8 @@ body {
 
 	border: 4px solid rgb(250, 250, 250, .1);
 	border-radius: 28px;
+
+	
 }
 
 .blur {
@@ -110,7 +121,7 @@ body {
 	right: -2px;
 	left: -2px;
 	bottom: -2px;
-	background: repeating-conic-gradient(from var(--a), #02a48b, #fd0085, #02443a, #770129, #02a48b, #fd0085, #02443a, #770129,  #02a48b, #fd0085, #02443a, #770129, #02a48b, #fd0085, #02443a, #770129);
+	background: repeating-conic-gradient(from var(--a), var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-1), var(--color-2), var(--color-3), var(--color-4),  var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-1), var(--color-2), var(--color-3), var(--color-4));
 	border-radius: 2px;
 	animation: rotating 20s linear infinite;
 }
@@ -122,7 +133,7 @@ body {
 	right: -2px;
 	left: -2px;
 	bottom: -2px;
-	background: repeating-conic-gradient(from var(--a), #02a48b, #fd0085, #02443a, #770129, #02a48b, #fd0085, #02443a, #770129,  #02a48b, #fd0085, #02443a, #770129, #02a48b, #fd0085, #02443a, #770129);
+	background: repeating-conic-gradient(from var(--a), var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-1), var(--color-2), var(--color-3), var(--color-4),  var(--color-1), var(--color-2), var(--color-3), var(--color-4), var(--color-1), var(--color-2), var(--color-3), var(--color-4));
 	border-radius: 19px;
 	animation: rotating 20s linear infinite;
 	filter: blur(5px);
@@ -163,7 +174,6 @@ body {
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
-	
 }
 
 .header__inner {
@@ -176,10 +186,12 @@ body {
 	font-size: calc(0.5rem + 1.2vw);
 	font-weight: 700;
 	max-width: 7rem;
+	text-shadow: 3px 3px 3px #000;
 }
 
-.logo span {
+.logo-title {
 	color: #9ac1ab;
+	transition: color .3s ease;
 }
 
 .header__link {
@@ -188,12 +200,15 @@ body {
 	width: calc(25px + 30vw);
 }
 
-.links {
+.links, .white__link {
 	text-decoration: none;
 	color: #9ac1ab;
 	text-transform: uppercase;
 	font-size: calc(4px + .46vw);
 	font-weight: 700;
+	text-shadow: 1px 1px 2px #000;
+
+	transition: color .3s ease;
 }
 
 .links:hover {
@@ -204,6 +219,10 @@ body {
 	color: #fafafa;
 }
 
+
+.section__inner {
+	transition: transform 0.1s;
+}
 
 .section__title {
 	margin: 10vw 10vw; 
